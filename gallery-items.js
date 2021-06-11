@@ -62,6 +62,48 @@ export default [
       "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     description: "Lighthouse Coast Sea",
   },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_1280.jpg",
+    description: "Elephant Trunk Tusks",
+  },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2018/08/19/12/23/photoshop-3616540_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2018/08/19/12/23/photoshop-3616540_1280.jpg",
+    description: "Photoshop Bear Woman",
+  },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2018/04/16/16/16/sunset-3325080_1280.jpg",
+    description: "Sunset, Sunrise, Nature",
+  },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2017/07/27/02/23/space-2543838_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2017/07/27/02/23/space-2543838_1280.jpg",
+    description: "Space",
+  },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2017/10/17/19/11/fantasy-2861815_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2017/10/17/19/11/fantasy-2861815_1280.jpg",
+    description: "UFO",
+  },
+  {
+    preview:
+      "https://cdn.pixabay.com/photo/2016/11/18/21/10/wolf-1836875_640.jpg",
+    original:
+      "https://cdn.pixabay.com/photo/2016/11/18/21/10/wolf-1836875_1280.jpg",
+    description: "Wolf",
+  },
 ];
 
 import images from "./gallery-items.js";
@@ -92,9 +134,9 @@ function createImagesCaredMarkup(images) {
 		href="#"
 	>
 		<img
-			class="gallery__image"
-			src="${preview}"
-			data-source="${original}"
+			class="gallery__image lazyload"
+			data-src="${preview}"
+      data-source="${original}"
 			alt="${description}"
 		/>
 	</a>
@@ -102,6 +144,10 @@ function createImagesCaredMarkup(images) {
     })
     .join("");
 }
+
+//      src="${preview}"
+// 			data-source="${original}"
+//
 
 // открытие модального окна
 imagesContainer.addEventListener("click", onOpenModalClick);
@@ -183,4 +229,4 @@ function onArrowLeftPreff(event) {
   }
 }
 
-// =====================
+
