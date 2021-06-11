@@ -96,7 +96,7 @@ body {
 }
 
 .lightbox__content {
-	transform: scale(0.95);
+	transform: scale(0.55);
 	transition: transform var(--animation-duration) var(--timing-function);
 }
 
